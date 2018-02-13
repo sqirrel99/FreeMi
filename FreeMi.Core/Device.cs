@@ -37,7 +37,7 @@ namespace FreeMi.Core
             UPnPDevice device = UPnPDevice.CreateRootDevice(1800, 1.0, "\\");
             device.Icon = Resources.Generic_Device120;
             device.Icon2 = Resources.Generic_Device48;
-            device.Manufacturer = "Stéphane Mitermite";
+            device.Manufacturer = "FreeMi";
             device.ManufacturerURL = "http://freemiupnp.fr/";
             device.ModelName = "FreeMi UPnP Media Server";
             device.ModelDescription = "UPnP/AV 1.0 Compliant Media Server for Freebox";
