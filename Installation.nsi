@@ -33,6 +33,7 @@
   !define MUI_FINISHPAGE_RUN "$INSTDIR\FreeMi UPnP Media Server.exe"
   !define MUI_FINISHPAGE_LINK "FreeMi UPnP Media Server (http://freemiupnp.fr/)"
   !define MUI_FINISHPAGE_LINK_LOCATION "http://freemiupnp.fr/"
+  !define MUI_ICON ".\FreeMi.Windows\FreeMi.ico"
 
 ;--------------------------------
 ;Pages
