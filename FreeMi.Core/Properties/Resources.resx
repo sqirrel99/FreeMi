@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Cancel" xml:space="preserve">
-    <value>Annuler</value>
+    <value>Cancel</value>
   </data>
   <data name="FileExplorer" xml:space="preserve">
-    <value>Explorateur de fichiers</value>
+    <value>File Explorer</value>
   </data>
   <data name="FreeMiPodcasts" xml:space="preserve">
     <value>Podcasts</value>
@@ -134,24 +134,24 @@
     <value>..\Resources\Generic_Device48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="InXMinutes" xml:space="preserve">
-    <value>Dans {0} minutes</value>
+    <value>In {0} minutes</value>
   </data>
   <data name="Music" xml:space="preserve">
-    <value>Musique</value>
+    <value>Music</value>
   </data>
   <data name="Pictures" xml:space="preserve">
-    <value>Images</value>
+    <value>Pictures</value>
   </data>
   <data name="Restart" xml:space="preserve">
-    <value>Redémarrer</value>
+    <value>Restart</value>
   </data>
   <data name="ShutdownComputer" xml:space="preserve">
-    <value>Arrêter l'ordinateur</value>
+    <value>Shut down Computer</value>
   </data>
   <data name="ShutdownImmediatly" xml:space="preserve">
-    <value>Arrêt immédiat</value>
+    <value>ShutdownImmediatly</value>
   </data>
   <data name="Videos" xml:space="preserve">
-    <value>Vidéos</value>
+    <value>Videos</value>
   </data>
 </root>

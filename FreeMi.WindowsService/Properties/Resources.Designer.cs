@@ -70,7 +70,7 @@ namespace FreeMi.WindowsService.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Installation du service réussie.
+        ///   Looks up a localized string similar to Installation Successful.
         /// </summary>
         public static string SuccessfulInstall {
             get {
@@ -79,7 +79,7 @@ namespace FreeMi.WindowsService.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Désinstallation du service réussie.
+        ///   Looks up a localized string similar to Uninstallation Successful.
         /// </summary>
         public static string SuccessfulUninstall {
             get {

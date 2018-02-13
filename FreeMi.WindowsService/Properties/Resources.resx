@@ -121,9 +121,9 @@
     <value>{0} Service</value>
   </data>
   <data name="SuccessfulInstall" xml:space="preserve">
-    <value>Installation du service réussie</value>
+    <value>Installation Successful</value>
   </data>
   <data name="SuccessfulUninstall" xml:space="preserve">
-    <value>Désinstallation du service réussie</value>
+    <value>Uninstallation Successful</value>
   </data>
 </root>

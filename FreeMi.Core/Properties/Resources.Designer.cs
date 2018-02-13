@@ -61,7 +61,7 @@ namespace FreeMi.Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Annuler.
+        ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string Cancel {
             get {
@@ -70,7 +70,7 @@ namespace FreeMi.Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Explorateur de fichiers.
+        ///   Looks up a localized string similar to File Explorer.
         /// </summary>
         public static string FileExplorer {
             get {
@@ -108,7 +108,7 @@ namespace FreeMi.Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dans {0} minutes.
+        ///   Looks up a localized string similar to In {0} minutes.
         /// </summary>
         public static string InXMinutes {
             get {
@@ -117,7 +117,7 @@ namespace FreeMi.Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Musique.
+        ///   Looks up a localized string similar to Music.
         /// </summary>
         public static string Music {
             get {
@@ -126,7 +126,7 @@ namespace FreeMi.Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Images.
+        ///   Looks up a localized string similar to Pictures.
         /// </summary>
         public static string Pictures {
             get {
@@ -135,7 +135,7 @@ namespace FreeMi.Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Redémarrer.
+        ///   Looks up a localized string similar to Restart.
         /// </summary>
         public static string Restart {
             get {
@@ -144,7 +144,7 @@ namespace FreeMi.Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Arrêter l&apos;ordinateur.
+        ///   Looks up a localized string similar to Shut down Computer.
         /// </summary>
         public static string ShutdownComputer {
             get {
@@ -153,7 +153,7 @@ namespace FreeMi.Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Arrêt immédiat.
+        ///   Looks up a localized string similar to ShutdownImmediatly.
         /// </summary>
         public static string ShutdownImmediatly {
             get {
@@ -162,7 +162,7 @@ namespace FreeMi.Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vidéos.
+        ///   Looks up a localized string similar to Videos.
         /// </summary>
         public static string Videos {
             get {

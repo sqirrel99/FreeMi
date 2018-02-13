@@ -61,7 +61,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to À propos de {0}.
+        ///   Looks up a localized string similar to About {0}.
         /// </summary>
         public static string About {
             get {
@@ -70,7 +70,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Auteur : Stéphane Mitermite
+        ///   Looks up a localized string similar to Author : Stéphane Mitermite
         ///Site web : http://freemiupnp.fr/.
         /// </summary>
         public static string AboutBox {
@@ -80,7 +80,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Paramètres avancés.
+        ///   Looks up a localized string similar to Advanced Settings.
         /// </summary>
         public static string AdvancedParameters {
             get {
@@ -89,7 +89,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Autoriser la suppression de fichiers (Freebox V5 uniquement).
+        ///   Looks up a localized string similar to Allow Deletion (Freebox V5 only).
         /// </summary>
         public static string AllowDeletion {
             get {
@@ -107,7 +107,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Taille du buffer (en kilo-octets).
+        ///   Looks up a localized string similar to Buffer Size (in kilbytes).
         /// </summary>
         public static string BufferSize {
             get {
@@ -116,7 +116,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to par défaut.
+        ///   Looks up a localized string similar to By Default.
         /// </summary>
         public static string ByDefault {
             get {
@@ -125,7 +125,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Annuler les modifications.
+        ///   Looks up a localized string similar to Cancel Changes.
         /// </summary>
         public static string CancelChanges {
             get {
@@ -134,7 +134,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vérifier si une nouvelle version est disponible au démarrage de l&apos;application.
+        ///   Looks up a localized string similar to Check For New Version Available At Startup.
         /// </summary>
         public static string CheckNewVersionAvailableAtStartup {
             get {
@@ -143,7 +143,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quitter.
+        ///   Looks up a localized string similar to Exit.
         /// </summary>
         public static string Close {
             get {
@@ -161,7 +161,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nom personnalisé pour le serveur.
+        ///   Looks up a localized string similar to Friendly Name For The Server.
         /// </summary>
         public static string CustomFriendlyName {
             get {
@@ -170,7 +170,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Supprimer.
+        ///   Looks up a localized string similar to Delete.
         /// </summary>
         public static string Delete {
             get {
@@ -197,7 +197,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Modifier.
+        ///   Looks up a localized string similar to Edit.
         /// </summary>
         public static string Edit {
             get {
@@ -206,7 +206,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Explorateur de fichiers.
+        ///   Looks up a localized string similar to File Explorer.
         /// </summary>
         public static string FileExplorer {
             get {
@@ -215,7 +215,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dossier.
+        ///   Looks up a localized string similar to Folder.
         /// </summary>
         public static string Folder {
             get {
@@ -224,7 +224,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Libellé du dossier :.
+        ///   Looks up a localized string similar to Folder Label :.
         /// </summary>
         public static string FolderLabel {
             get {
@@ -233,7 +233,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Chemin du dossier :.
+        ///   Looks up a localized string similar to Folder Path :.
         /// </summary>
         public static string FolderPath {
             get {
@@ -242,7 +242,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dossiers.
+        ///   Looks up a localized string similar to Folders.
         /// </summary>
         public static string Folders {
             get {
@@ -260,7 +260,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Freebox V6 (ou autre client UPnP).
+        ///   Looks up a localized string similar to Freebox V6 (or other UPnP client).
         /// </summary>
         public static string FreeboxV6OrOtherUPnPClient {
             get {
@@ -278,7 +278,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Support de l&apos;IPv6.
+        ///   Looks up a localized string similar to IPv6 Support.
         /// </summary>
         public static string IPv6Support {
             get {
@@ -287,7 +287,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Type de média.
+        ///   Looks up a localized string similar to Media Type.
         /// </summary>
         public static string MediaKind {
             get {
@@ -296,7 +296,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Flux réseau.
+        ///   Looks up a localized string similar to Network Stream.
         /// </summary>
         public static string NetworkStream {
             get {
@@ -305,7 +305,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nouveau.
+        ///   Looks up a localized string similar to New.
         /// </summary>
         public static string New {
             get {
@@ -314,7 +314,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Une nouvelle version est disponible !.
+        ///   Looks up a localized string similar to New Version Available !.
         /// </summary>
         public static string NewVersionAvailable {
             get {
@@ -323,8 +323,8 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Une nouvelle version de {0} est disponible ({1}). Vous possédez actuellement la version {2}.
-        ///Souhaitez-vous consulter la page des téléchargements ?.
+        ///   Looks up a localized string similar to A new version of {0} is available ({1}). You currently have version {2}.
+        ///Do you want to visit the downloads page ?.
         /// </summary>
         public static string NewVersionAvailableMessage {
             get {
@@ -333,7 +333,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Autre.
+        ///   Looks up a localized string similar to Other.
         /// </summary>
         public static string Other {
             get {
@@ -351,7 +351,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Adresse du podcast :.
+        ///   Looks up a localized string similar to Podcast Address :.
         /// </summary>
         public static string PodcastAddress {
             get {
@@ -360,7 +360,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Libellé du podcast :.
+        ///   Looks up a localized string similar to Podcast Label :.
         /// </summary>
         public static string PodcastLabel {
             get {
@@ -369,7 +369,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Appuyez sur &lt;Entrée&gt; pour quitter.
+        ///   Looks up a localized string similar to Press Enter To Quit.
         /// </summary>
         public static string PressEnterToQuit {
             get {
@@ -378,7 +378,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Serveur redémarré.
+        ///   Looks up a localized string similar to Restarted Server.
         /// </summary>
         public static string RestartedServer {
             get {
@@ -397,7 +397,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Redémarrer le serveur.
+        ///   Looks up a localized string similar to Restart Server.
         /// </summary>
         public static string RestartServer {
             get {
@@ -406,7 +406,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lancer au démarrage de Windows.
+        ///   Looks up a localized string similar to Run At Windows Startup.
         /// </summary>
         public static string RunAtWindowsStartup {
             get {
@@ -415,7 +415,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enregistrer.
+        ///   Looks up a localized string similar to Save.
         /// </summary>
         public static string Save {
             get {
@@ -424,7 +424,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Menu &apos;Arrêter l&apos;ordinateur&apos;.
+        ///   Looks up a localized string similar to Menu &apos;Shut down computer&apos;.
         /// </summary>
         public static string ShutdownMenu {
             get {
@@ -433,7 +433,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Adresse du flux :.
+        ///   Looks up a localized string similar to Stream Address :.
         /// </summary>
         public static string StreamAddress {
             get {
@@ -442,7 +442,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Libellé du flux :.
+        ///   Looks up a localized string similar to Stream Label :.
         /// </summary>
         public static string StreamLabel {
             get {
@@ -451,7 +451,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Port TCP (0 = port dynamique).
+        ///   Looks up a localized string similar to Port TCP (0 = dynamic port).
         /// </summary>
         public static string TCPPort {
             get {
@@ -469,7 +469,7 @@ namespace FreeMi.UI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vidéo.
+        ///   Looks up a localized string similar to Video.
         /// </summary>
         public static string Video {
             get {
