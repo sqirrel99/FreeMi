@@ -1,0 +1,251 @@
+﻿<Window x:Class="FreeMi.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:FreeMi.Windows"
+        xmlns:ui="clr-namespace:FreeMi.UI.ViewModels;assembly=FreeMi.UI"
+        Title="{Binding ProductName}" 
+        Height="{Binding WindowHeight, Mode=TwoWay}"
+        Width="{Binding WindowWidth, Mode=TwoWay}" 
+        MinHeight="480" 
+        MinWidth="640" 
+        Icon="FreeMi_XP.ico">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        <local:DataTemplateSelector x:Key="DataTemplateSelector" />
+        <ContextMenu x:Key="ContextMenu" DataContext="{Binding RelativeSource={RelativeSource Self}, Path=PlacementTarget.DataContext}">
+            <MenuItem Header="{local:Resx Key=New}" Visibility="{Binding CanAddSubItems, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Visible}">
+                <MenuItem.Icon>
+                    <Image Source="{StaticResource MyVideos}" MaxWidth="16" MaxHeight="16" />
+                </MenuItem.Icon>
+                <MenuItem Header="{local:Resx Key=Folder}" Command="{Binding ParentViewModel.NewCommand}" CommandParameter="Folder">
+                    <MenuItem.Icon>
+                        <Image Source="{StaticResource FolderIcon}" MaxWidth="16" MaxHeight="16" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="{local:Resx Key=NetworkStream}" Command="{Binding ParentViewModel.NewCommand}" CommandParameter="File">
+                    <MenuItem.Icon>
+                        <Image Source="{StaticResource MovFormat}" MaxWidth="16" MaxHeight="16" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="{local:Resx Key=Podcast}" Command="{Binding ParentViewModel.NewCommand}" CommandParameter="Podcast">
+                    <MenuItem.Icon>
+                        <Image Source="{StaticResource RSSFeeds}" MaxWidth="16" MaxHeight="16"  />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="{local:Resx Key=FileExplorer}" Command="{Binding ParentViewModel.NewCommand}" CommandParameter="FileExplorer">
+                    <MenuItem.Icon>
+                        <Image Source="{StaticResource MyComputerIcon}" MaxWidth="16" MaxHeight="16" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="{local:Resx Key=ShutdownMenu}" Command="{Binding ParentViewModel.NewCommand}" CommandParameter="Shutdown">
+                    <MenuItem.Icon>
+                        <Image Source="{StaticResource Power}" MaxWidth="16" MaxHeight="16" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <Separator Visibility="{Binding CanAddSubItems, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}" />
+            <MenuItem Header="{local:Resx Key=Delete}" Visibility="{Binding CanDelete, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
+                      Command="{Binding ParentViewModel.RemoveCommand}" InputGestureText="{local:Resx Key=DeleteGestureText}">
+                <MenuItem.Icon>
+                    <Image Source="{StaticResource Delete}" MaxWidth="16" MaxHeight="16" />
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+        <DataTemplate x:Key="DefaultEditTemplate" />
+        <DataTemplate x:Key="FolderEditTemplate">
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition  />
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <GroupBox Grid.ColumnSpan="3" Header="{local:Resx Key=MediaKind}" HorizontalAlignment="Center">
+                    <StackPanel>
+                        <CheckBox IsChecked="{Binding IsAudioMediaKind, Mode=TwoWay}">
+                            <TextBlock Text="{local:Resx Key=Audio}"></TextBlock>
+                        </CheckBox>
+                        <CheckBox IsChecked="{Binding IsVideoMediaKind, Mode=TwoWay}">
+                            <TextBlock Text="{local:Resx Key=Video}"></TextBlock>
+                        </CheckBox>
+                        <CheckBox IsChecked="{Binding IsImageMediaKind, Mode=TwoWay}">
+                            <TextBlock Text="{local:Resx Key=Image}"></TextBlock>
+                        </CheckBox>
+                        <CheckBox IsChecked="{Binding IsOtherMediaKind, Mode=TwoWay}">
+                            <TextBlock Text="{local:Resx Key=Other}"></TextBlock>
+                        </CheckBox>
+                    </StackPanel>
+                </GroupBox>
+
+                <TextBlock Grid.Row="1" Text="{local:Resx Key=FolderLabel}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,0,0" />
+                <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Text, Mode=TwoWay}" Margin="5,5,0,0" Padding="2" VerticalAlignment="Center" />
+
+                <TextBlock Grid.Row="2" Margin="0,5,0,0" Text="{local:Resx Key=FolderPath}" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                <TextBox Grid.Row="2" Name="txtPath" Grid.Column="1" Text="{Binding Path, Mode=TwoWay}" Margin="5,5,5,0" VerticalAlignment="Center" Padding="2" />
+                <Button Grid.Row="2" Margin="0,5,0,0" Grid.Column="2" Width="20" VerticalAlignment="Center" Height="{Binding Path=ActualHeight, ElementName=txtPath}"
+                    Command="{Binding ParentViewModel.BrowseCommand}">...</Button>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="FileEditTemplate">
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="{local:Resx Key=StreamLabel}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,0,0" />
+                <TextBox Grid.Column="1" Text="{Binding Text, Mode=TwoWay}" Margin="5,5,0,0" Padding="2" VerticalAlignment="Center" />
+
+                <TextBlock Grid.Row="1" Text="{local:Resx Key=StreamAddress}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,0,0" />
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Path, Mode=TwoWay}" Margin="5,5,0,0" Padding="2" VerticalAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="PodcastEditTemplate">
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="{local:Resx Key=PodcastLabel}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,0,0" />
+                <TextBox Grid.Column="1" Text="{Binding Text, Mode=TwoWay}" Margin="5,5,0,0" Padding="2" VerticalAlignment="Center" />
+
+                <TextBlock Grid.Row="1" Text="{local:Resx Key=PodcastAddress}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,5,0,0" />
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Path, Mode=TwoWay}" Margin="5,5,0,0" Padding="2" VerticalAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+        <HierarchicalDataTemplate x:Key="HierarchicalDataTemplate" ItemsSource="{Binding Children}">
+            <Border Padding="0,3,0,3" ContextMenu="{StaticResource ContextMenu}" MinWidth="180">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image local:ImageSource.ResourceKey="{Binding IconKey}" Width="30" Height="{Binding Path=ActualHeight, ElementName=txtLabel}" />
+                    <TextBlock Grid.Column="1" Name="txtLabel" Text="{Binding Label}" VerticalAlignment="Center" Padding="5" TextWrapping="Wrap" />
+                </Grid>
+            </Border>
+        </HierarchicalDataTemplate>
+    </Window.Resources>
+
+    <Window.InputBindings>
+        <KeyBinding Key="Delete" Command="{Binding RemoveCommand}" />
+    </Window.InputBindings>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <ToolBar ToolBarTray.IsLocked="True" OverflowMode="Never" Height="40" KeyboardNavigation.TabNavigation="Continue" FocusManager.IsFocusScope="False">
+            <Button Command="{Binding SaveCommand}">
+                <Image Source="{StaticResource Save}" ToolTip="{local:Resx Key=Save}" />
+            </Button>
+            <Button Command="{Binding UndoCommand}">
+                <Image Source="{StaticResource Undo}" ToolTip="{local:Resx Key=CancelChanges}" />
+            </Button>
+        </ToolBar>
+        <TabControl Grid.Row="1">
+            <TabItem Header="{local:Resx Key=Folders}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <local:StretchingTreeView x:Name="treeView" 
+                          Margin="3"                          
+                          AllowDrop="True"
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                          local:TreeViewHelpers.TreeViewSelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                          ItemsSource="{Binding Entries}" 
+                          ItemTemplate="{StaticResource HierarchicalDataTemplate}"
+                          ContextMenu="{StaticResource ContextMenu}" 
+                          PreviewMouseRightButtonDown="treeView_PreviewMouseRightButtonDown" 
+                          DragEnter="treeView_DragEnter" 
+                          Drop="treeView_Drop" 
+                          PreviewMouseMove="treeView_PreviewMouseMove" 
+                          DragOver="treeView_DragOver" 
+                          DragLeave="treeView_DragLeave" 
+                          PreviewMouseLeftButtonDown="treeView_PreviewMouseLeftButtonDown">
+                        <TreeView.ItemContainerStyle>
+                            <Style TargetType="{x:Type TreeViewItem}">
+                                <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                                <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                                <Setter Property="FontWeight" Value="Normal" />
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="FontWeight" Value="Bold" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TreeView.ItemContainerStyle>
+                    </local:StretchingTreeView>
+                    <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+                    <ContentControl Grid.Column="2" Content="{Binding SelectedItem}" ContentTemplateSelector="{StaticResource DataTemplateSelector}" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="{local:Resx Key=AdvancedParameters}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <CheckBox Margin="3" Content="{local:Resx Key=CheckNewVersionAvailableAtStartup}" IsChecked="{Binding CheckNewVersionAvailable}" />
+                    <CheckBox Grid.Row="1" Margin="3" Content="{local:Resx Key=RunAtWindowsStartup}" IsChecked="{Binding RunAtWindowsStartup}" 
+                              Visibility="{Binding RunAtWindowsStartupVisible, Converter={StaticResource BoolToVisibilityConverter}}" />
+                    <CheckBox Grid.Row="2" Margin="3,13,3,3" Content="{local:Resx Key=IPv6Support}" IsChecked="{Binding IPv6Enabled}" />
+                    <CheckBox Grid.Row="3" Margin="3,13,3,3" Content="{local:Resx Key=AllowDeletion}" IsChecked="{Binding AllowDeletion}" />
+                    <Grid Grid.Row="4" Margin="3,13,3,3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Margin="3"  VerticalAlignment="Center" Text="{local:Resx Key=TCPPort}" />
+                        <TextBox Grid.Column="1" Text="{Binding PortNumber, Mode=TwoWay}" Margin="3" Width="60" MaxLength="5" TextAlignment="Right" />
+                        <TextBlock Grid.Row="1" Margin="3" VerticalAlignment="Center" Text="{local:Resx Key=CustomFriendlyName}" />
+                        <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="3" Width="400" HorizontalAlignment="Left" MaxLength="80" Text="{Binding FriendlyName, Mode=TwoWay}" />
+                    </Grid>
+                    <Grid Grid.Row="5" Margin="3,13,3,3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <GroupBox Header="{local:Resx Key=BufferSize}" >
+                            <Grid Margin="3,3,3,3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Margin="3" VerticalAlignment="Center" Text="{local:Resx Key=FreeboxV5}" />
+                                <ComboBox Grid.Column="1"  Width="120" Margin="3" ItemsSource="{Binding BufferSizesV5}" SelectedValue="{Binding V5BufferSize, Mode=TwoWay}"  />
+                                <TextBlock  Grid.Column="2" Margin="23,3,3,3" VerticalAlignment="Center" Text="{local:Resx Key=FreeboxV6OrOtherUPnPClient}" />
+                                <ComboBox Grid.Column="3" Width="120" Margin="3" ItemsSource="{Binding BufferSizesV6}" SelectedValue="{Binding V6BufferSize, Mode=TwoWay}" />
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

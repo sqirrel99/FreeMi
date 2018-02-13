@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeMi.Core", "FreeMi.Core\FreeMi.Core.csproj", "{4198DAD8-1FF3-4061-8EBF-C39987AA0C4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPnP", "UPnP\UPnP.csproj", "{73C32005-9739-48A0-90FC-7394A80CE280}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeMi.Windows", "FreeMi.Windows\FreeMi.Windows.csproj", "{BFEA8758-FB42-44E7-8A10-98F75A328779}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeMi.Console", "FreeMi.Console\FreeMi.Console.csproj", "{7869730D-165F-4653-B859-5364DC403EF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeMi.WindowsService", "FreeMi.WindowsService\FreeMi.WindowsService.csproj", "{C138F7F5-F07B-44BB-86C7-EF62C9F65777}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeMi.UI", "FreeMi.UI\FreeMi.UI.csproj", "{CD60FD88-DC0E-43E4-B997-9A8EBF43E3D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Mono|Any CPU = Mono|Any CPU
+		Portable|Any CPU = Portable|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Service|Any CPU = Service|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4198DAD8-1FF3-4061-8EBF-C39987AA0C4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4198DAD8-1FF3-4061-8EBF-C39987AA0C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4198DAD8-1FF3-4061-8EBF-C39987AA0C4D}.Mono|Any CPU.ActiveCfg = Mono|Any CPU
+		{4198DAD8-1FF3-4061-8EBF-C39987AA0C4D}.Mono|Any CPU.Build.0 = Mono|Any CPU
+		{4198DAD8-1FF3-4061-8EBF-C39987AA0C4D}.Portable|Any CPU.ActiveCfg = Portable|Any CPU
+		{4198DAD8-1FF3-4061-8EBF-C39987AA0C4D}.Portable|Any CPU.Build.0 = Portable|Any CPU
+		{4198DAD8-1FF3-4061-8EBF-C39987AA0C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4198DAD8-1FF3-4061-8EBF-C39987AA0C4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4198DAD8-1FF3-4061-8EBF-C39987AA0C4D}.Service|Any CPU.ActiveCfg = Service|Any CPU
+		{4198DAD8-1FF3-4061-8EBF-C39987AA0C4D}.Service|Any CPU.Build.0 = Service|Any CPU
+		{73C32005-9739-48A0-90FC-7394A80CE280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C32005-9739-48A0-90FC-7394A80CE280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C32005-9739-48A0-90FC-7394A80CE280}.Mono|Any CPU.ActiveCfg = Release|Any CPU
+		{73C32005-9739-48A0-90FC-7394A80CE280}.Mono|Any CPU.Build.0 = Release|Any CPU
+		{73C32005-9739-48A0-90FC-7394A80CE280}.Portable|Any CPU.ActiveCfg = Release|Any CPU
+		{73C32005-9739-48A0-90FC-7394A80CE280}.Portable|Any CPU.Build.0 = Release|Any CPU
+		{73C32005-9739-48A0-90FC-7394A80CE280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C32005-9739-48A0-90FC-7394A80CE280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C32005-9739-48A0-90FC-7394A80CE280}.Service|Any CPU.ActiveCfg = Release|Any CPU
+		{73C32005-9739-48A0-90FC-7394A80CE280}.Service|Any CPU.Build.0 = Release|Any CPU
+		{BFEA8758-FB42-44E7-8A10-98F75A328779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFEA8758-FB42-44E7-8A10-98F75A328779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFEA8758-FB42-44E7-8A10-98F75A328779}.Mono|Any CPU.ActiveCfg = Release|Any CPU
+		{BFEA8758-FB42-44E7-8A10-98F75A328779}.Portable|Any CPU.ActiveCfg = Portable|Any CPU
+		{BFEA8758-FB42-44E7-8A10-98F75A328779}.Portable|Any CPU.Build.0 = Portable|Any CPU
+		{BFEA8758-FB42-44E7-8A10-98F75A328779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFEA8758-FB42-44E7-8A10-98F75A328779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFEA8758-FB42-44E7-8A10-98F75A328779}.Service|Any CPU.ActiveCfg = Service|Any CPU
+		{BFEA8758-FB42-44E7-8A10-98F75A328779}.Service|Any CPU.Build.0 = Service|Any CPU
+		{7869730D-165F-4653-B859-5364DC403EF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7869730D-165F-4653-B859-5364DC403EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7869730D-165F-4653-B859-5364DC403EF8}.Mono|Any CPU.ActiveCfg = Mono|Any CPU
+		{7869730D-165F-4653-B859-5364DC403EF8}.Mono|Any CPU.Build.0 = Mono|Any CPU
+		{7869730D-165F-4653-B859-5364DC403EF8}.Portable|Any CPU.ActiveCfg = Release|Any CPU
+		{7869730D-165F-4653-B859-5364DC403EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7869730D-165F-4653-B859-5364DC403EF8}.Service|Any CPU.ActiveCfg = Release|Any CPU
+		{C138F7F5-F07B-44BB-86C7-EF62C9F65777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C138F7F5-F07B-44BB-86C7-EF62C9F65777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C138F7F5-F07B-44BB-86C7-EF62C9F65777}.Mono|Any CPU.ActiveCfg = Release|Any CPU
+		{C138F7F5-F07B-44BB-86C7-EF62C9F65777}.Portable|Any CPU.ActiveCfg = Release|Any CPU
+		{C138F7F5-F07B-44BB-86C7-EF62C9F65777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C138F7F5-F07B-44BB-86C7-EF62C9F65777}.Service|Any CPU.ActiveCfg = Service|Any CPU
+		{C138F7F5-F07B-44BB-86C7-EF62C9F65777}.Service|Any CPU.Build.0 = Service|Any CPU
+		{CD60FD88-DC0E-43E4-B997-9A8EBF43E3D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD60FD88-DC0E-43E4-B997-9A8EBF43E3D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD60FD88-DC0E-43E4-B997-9A8EBF43E3D8}.Mono|Any CPU.ActiveCfg = Release|Any CPU
+		{CD60FD88-DC0E-43E4-B997-9A8EBF43E3D8}.Portable|Any CPU.ActiveCfg = Portable|Any CPU
+		{CD60FD88-DC0E-43E4-B997-9A8EBF43E3D8}.Portable|Any CPU.Build.0 = Portable|Any CPU
+		{CD60FD88-DC0E-43E4-B997-9A8EBF43E3D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD60FD88-DC0E-43E4-B997-9A8EBF43E3D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD60FD88-DC0E-43E4-B997-9A8EBF43E3D8}.Service|Any CPU.ActiveCfg = Service|Any CPU
+		{CD60FD88-DC0E-43E4-B997-9A8EBF43E3D8}.Service|Any CPU.Build.0 = Service|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
